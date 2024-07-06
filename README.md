@@ -12,7 +12,7 @@
 
 ![](https://cdn.discordapp.com/attachments/813918986022420505/1259250255547990077/TboxSchematic.png?ex=668affb0&is=6689ae30&hm=efd8cd73df257ad40a8bfb032a0782bd76de7687c804e20bc925214f1759d9c9&)
 
-#How to setup project:
+# How to setup project:
 
 1)download PlatformIO extension in visual studio code IDE
 
