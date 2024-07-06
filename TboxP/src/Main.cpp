@@ -49,8 +49,6 @@ DynamicObject chooseIcon(8,8,chooseIconSurface,0,16);
 Snake_Game snake;
 Tetris_Game tetris;
  
-
-
 void Main()  
 {
   switch (chosenGame)

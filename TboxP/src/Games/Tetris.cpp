@@ -109,7 +109,7 @@ bool Tetris_Game::collision(int futureX, int futureY,bool futureTetrominoSurface
                 surfaceIndex++;
             }
     }
-    else //o-oh, special treatment :3, there is a rotation bug here when rotating next to walls, fix   
+    else   
     {
         // Check if rotation is blocked by both sides
         if (collision(1, 0, futureTetrominoSurface) && collision(-1, 0, futureTetrominoSurface)) 

@@ -14,13 +14,10 @@ Snake_Game::Snake_Game() //game's constructor
     
     currentX = (aspectRatio) ? 8 : 16;
     currentY = (aspectRatio) ? 16 : 8;    
-    
-
 }
 
 void Snake_Game::gameRun() // this runs in loop()
 {    
-    
     if(movementTime.isReady()) //movement
     {
         //x constant velocity

@@ -4,7 +4,6 @@
 /*
 /////TODO AREA:
 
-
 /////Finished:
     my sanity
     plan out function sequences (somewhat, picture in the folder)
@@ -62,8 +61,6 @@
 hw_timer_t * timer = NULL;
 volatile uint32_t startTime = 0;
 volatile uint32_t endTime = 0;
-
-bool canRun = true;
 bool aspectRatio = true;
 unsigned long timeCount = 0;
 
@@ -72,7 +69,7 @@ LedControl LEDMatrix[2] = { LedControl(DIN, CLK, CS, 2), LedControl(DIN, CLK, CS
 bool previousMatrixArea[8][16];
 bool matrixArea[8][16] = {{false}};
 
-JoyStick rightJoyStick(LpinX, LpinY, RpinJoyStickButtonRead);
+JoyStick rightJoyStick(LpinX, LpinY, RpinJoyStickButton);
 JoyStick leftJoyStick(RpinX, RpinY);
 
 void IRAM_ATTR onTimer() // I have no clue how this works
@@ -89,9 +86,6 @@ void setup()
     LEDMatrix[i].setIntensity(i, 3); 
     LEDMatrix[i].clearDisplay(i);    
   }
-
-
-
   // Set up the hardware timer, once again, no clue how this works
   timer = timerBegin(0, 80, true); // Use timer 0, prescaler 80, count up
   timerAttachInterrupt(timer, &onTimer, true); // Attach the interrupt
@@ -106,7 +100,7 @@ void loop()
   {
     randomSeed(millis());
     
-    rightJoyStick.JoyStickUpdateData(); //inputs
+    rightJoyStick.JoyStickUpdateData(); //input update
     leftJoyStick.JoyStickUpdateData();
     
     Main();
@@ -135,9 +129,8 @@ void renderScreen() //renders to matrices from matrixArea 2d array dependant on 
   Timer::frameCount++;
   timeCount += 20; // my hope is that if like 2 frames skip, both will immediatly occur and there will be no desync (please)       
 }  
-void nanoSecondCalculate() 
+void nanoSecondCalculate() //framerate calculations
 {
-  // Calculate elapsed time
   double elapsedTime = endTime - startTime;
 
   Serial.print("Elapsed Time: ");
@@ -148,6 +141,5 @@ void nanoSecondCalculate()
   Serial.print(1 / (float)(elapsedTime / 1000000));
   Serial.println(" FPS)");
 
-  // Reset start time for next iteration
   startTime = micros();
 }

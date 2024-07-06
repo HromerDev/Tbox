@@ -41,6 +41,7 @@ class Tetris_Game
         {0,0,0,0,1,1,1,1,0}  //Z
     };
     bool tetrominoFaceI[16] {0,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0};
+    
     public:
         Tetris_Game();
         void gameRun();

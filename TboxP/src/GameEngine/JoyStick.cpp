@@ -1,15 +1,5 @@
 #include "JoyStick.h"
 
-/*
-JoyStick::JoyStick(int _xPin, int _yPin) //joystick that doesn't use button
-{  
-    xPin = _xPin;
-    yPin = _yPin;
-
-    pinMode(xPin, OUTPUT);
-    pinMode(yPin, OUTPUT); 
-}
-*/
 JoyStick::JoyStick(int _xPin, int _yPin, int _buttonPin) // joystick which uses button
 {
     xPin = _xPin;

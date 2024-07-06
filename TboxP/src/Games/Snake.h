@@ -25,10 +25,8 @@ class Snake_Game
     void moveTail();
     
     public:
-    bool isActive = true;
     Snake_Game();
-    void gameRun();
-    void quitGame();   
+    void gameRun();  
 
     
 };
