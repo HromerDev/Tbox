@@ -18,4 +18,4 @@
 
 2)File -> "Open Folder" and open the project folder
 
-##All code is inside src folder
+## All code is inside src folder
