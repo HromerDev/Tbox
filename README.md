@@ -1,1 +1,3 @@
-too lazy to  do a readme, all code is in the src folder
+A game console made with c++ for an ESP32
+
+built in vscode with PlatformIO
