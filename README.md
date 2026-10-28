@@ -1,5 +1,5 @@
 # Tbox
-## A Game Console made with C++ for an ESP32, built with VSCode + **PlatformIO** Extension
+## A Game Console made with C++ in VSCode + **PlatformIO** Extension for an ESP32
 ![Tbox console](Tbox.jpg)
 
 ## **Hardware Required:** 
