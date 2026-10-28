@@ -1,7 +1,7 @@
 # Tbox
 ## A Game Console made with C++ in VSCode + **PlatformIO** Extension for an ESP32
 
-# Included games: Tetris, Snake
+# Included games: Snake, Tetris
 # Snake Controls:
 - Left Joystick
 # Tetris Controls: 
